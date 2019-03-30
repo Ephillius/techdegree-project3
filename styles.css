@@ -118,6 +118,11 @@ select {
 	width: 100%; 
 }
 
+.primary input:focus,
+textarea:focus {
+	border: 2px solid teal;
+}
+
 select option {
 	width: 100%;
 }
@@ -209,8 +214,8 @@ button {
 
 	.primary input:focus, 
 	textarea:focus {
-		z-index: 10;
-		border: 2px solid teal;
+		border: 0;
+		background-color: lightblue;
 		transition: .5s;
 	}
 
