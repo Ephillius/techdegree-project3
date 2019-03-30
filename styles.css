@@ -209,6 +209,7 @@ button {
 
 	.primary input:focus, 
 	textarea:focus {
+		z-index: 10;
 		border: 2px solid teal;
 		transition: .5s;
 	}
