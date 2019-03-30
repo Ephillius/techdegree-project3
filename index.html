@@ -1,18 +1,27 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 	<link rel="stylesheet" type="text/css" href="styles.css">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
 	<title>The Code Review Newsletter</title>
 </head>
 <body>
-	<h1>The Code Review</h1>
+	<header>
+		<h1 class="center">The Code Review</h1>
+	</header>
+
+<main>
 	<form action="index.html" method="post">
 
-		<h2>Signup for out newsletter</h2>
-		<p>Get the lastest news on how your code is doing right in your inbox</p>
+		<div class="line">
+			<h2 class="center">Signup for our newsletter</h2>
+			<p class="center intro greyed_out">Get the lastest news on how your code is doing right in your inbox</p>
+		</div>
 
-		<fieldset>
+		<hr class="hr_color hr1">
+
+		<fieldset class="primary">
 			<legend>Contact Information</legend>
 
 			<label for="name">Full Name</label>
@@ -22,7 +31,7 @@
 			<input type="email" id="mail" placeholder="Required" name="user_email" required>
 
 			<label for="phone">Phone Number</label>
-			<input type="number" id="phone" name="user_phone">
+			<input type="tel" id="phone" name="user_phone">
 
 			<label for="address">Street Address</label>
 			<input type="text" id="address" name="user_address">
@@ -31,7 +40,7 @@
 			<input type="text" id="city" name="user_city">
 
 			<label for="state">State</label>
-			<select>
+			<select id="state" name="user_state">
 				<option value="" disabled selected hidden>Choose State</option>
 				<option value="AL">Alabama</option>
 				<option value="AK">Alaska</option>
@@ -87,36 +96,42 @@
 			</select>	
 
 			<label for="zipcode">Zip Code</label>
-			<input type="number" id="zipcode" name="user_zipcode">
+			<input type="text" id="zipcode" name="user_zipcode" pattern="[0-9]*">
 		</fieldset>
+		
+		<hr class="hr_color">
 
 		<fieldset>
 			<legend>Newsletter</legend>
 			
 			<label>Select the newsletter you would like to recieve</label>
-			<input type="checkbox" id="html" value="html_newsletter" name="prefered_newsletter"></input>
-			<label for="html">HTML News</label>
+			<input type="checkbox" id="html" value="html_newsletter" name="prefered_newsletter">
+			<label class="choice" for="html">HTML News</label>
 			<br>
-			<input type="checkbox" id="css" value="css_newsletter" name="prefered_newsletter"></input>
-			<label for="css">CSS News</label>
+			<input type="checkbox" id="css" value="css_newsletter" name="prefered_newsletter">
+			<label class="choice" for="css">CSS News</label>
 			<br>
-			<input type="checkbox" id="javascript" value="javascript_newsletter" name="prefered_newsletter"></input>
-			<label for="javascript">Javascript News</label>
+			<input type="checkbox" id="javascript" value="javascript_newsletter" name="prefered_newsletter">
+			<label class="choice" for="javascript">Javascript News</label>
 			<br>
 
 			<label>Newsletter format</label>
-			<input type="radio" id="by_html" value="by_html" name="html_format">
-			<label for="by_html">HTML</label>
+			<input type="radio" id="by_html" value="by_html" name="newsletter_format">
+			<label class="choice" for="by_html">HTML</label>
 			<br>
-			<input type="radio" id="by_text" value="by_text" name="plaintext_format">
-			<label for="by_text">Plain text</label>
+			<input type="radio" id="by_text" value="by_text" name="newsletter_format">
+			<label class="choice" for="by_text">Plain text</label>
 
-			<label for="thoughts">Other topics you'd like to har about</label>
-			<textarea id="thoughts" name="user_thoughts"></textarea>
+			<label for="thoughts">Other topics you'd like to hear about</label>
+			<textarea id="thoughts" name="user_thoughts" placeholder="Your opinions count as well"></textarea>
 		</fieldset>
 		
-		<button>Sign Up</button>
+		<button type="submit">Sign Up</button>
 	</form>
-	<span>Copyright The Code Review</span>
+</main>
+
+	<footer>
+		<p class="center italic greyed_out">&copy;The Code Review</p>
+	</footer>
 </body>
 </html>
